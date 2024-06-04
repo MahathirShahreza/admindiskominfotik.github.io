@@ -17,6 +17,9 @@
 .datatable-bottom > div:first-child {
 	float: left;
 }
+.bold-placeholder::placeholder {
+    font-weight: bold;
+}
 
 .datatable-top > nav:last-child,
 .datatable-top > div:not(first-child),

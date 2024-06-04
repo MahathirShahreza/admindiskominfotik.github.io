@@ -1164,6 +1164,19 @@ h6 {
   padding: 12px 15px;
 }
 
+.contact .php-email-form button[type=view] {
+  background: #ffe600;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+
+}
+
+.contact .php-email-form button[type=view]:hover {
+  background: #2bff00;
+}
 .contact .php-email-form button[type=submit] {
   background: #4154f1;
   border: 0;
@@ -1174,7 +1187,7 @@ h6 {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #5969f3;
+  background: #ff0303;
 }
 
 @keyframes animate-loading {
@@ -1245,4 +1258,33 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+.button-group {
+  margin-top: 10px;
+}
+
+.button-group .btn {
+  margin-right: 5px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+.card {
+  margin-bottom: 20px; /* Adjust the value as needed */
 }

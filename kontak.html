@@ -71,12 +71,12 @@
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
+            <span class="badge bg-primary badge-number">99+</span>
           </a><!-- End Notification Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
-              You have 4 new notifications
+              You have 99+ new notifications
               <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
             </li>
             <li>
@@ -146,12 +146,12 @@
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
+            <span class="badge bg-success badge-number">2</span>
           </a><!-- End Messages Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
-              You have 3 new messages
+              You have 2 new messages
               <a href="inbox.html"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
             </li>
             <li>
@@ -162,8 +162,8 @@
               <a href="inbox.html">
                 <img src="assets/img/logopesan.png" alt="" class="rounded-circle">
                 <div>
-                  <h4>Admin Dinas Kesehatan Sumatera Barat</h4>
-                  <p>PEMBERITAHUAN TERKAIT INFORMASI ATAS ASPIRASI YANG DIKIRIMKAN...</p>
+                  <h4>Admin Instansi Lain</h4>
+                  <p>PENGADUAN TERKAIT MASALAH WEBSITE DISKOMINFOTIK </p>
                   <p>4 hrs. ago</p>
                 </div>
               </a>
@@ -176,8 +176,8 @@
               <a href="inbox.html">
                 <img src="assets/img/logopesan.png" alt="" class="rounded-circle">
                 <div>
-                  <h4>Admin Dinas Perdagangan Sumatera Barat</h4>
-                  <p>PEMBERITAHUAN TERKAIT INFORMASI ATAS ASPIRASI YANG DIKIRIMKAN...</p>
+                  <h4>Admin Instansi Lain</h4>
+                  <p>ASPIRASI TERKAIT USULAN PELATIHAN PENGGUNAAN INTERNET</p>
                   <p>8 hrs. ago</p>
                 </div>
               </a>
@@ -186,17 +186,7 @@
               <hr class="dropdown-divider">
             </li>
 
-            <li class="message-item">
-              <li class="message-item">
-                <a href="inbox.html">
-                  <img src="assets/img/logopesan.png" alt="" class="rounded-circle">
-                  <div>
-                    <h4>Admin Dinas Kehutanan Sumatera Barat</h4>
-                    <p>PEMBERITAHUAN TERKAIT INFORMASI ATAS ASPIRASI YANG DIKIRIMKAN...</p>
-                    <p>12 hrs. ago</p>
-                  </div>
-                </a>
-              </li>
+            
 
             <li class="dropdown-footer">
               <a href="#">Show all messages</a>
@@ -279,12 +269,7 @@
           <span>Inbox</span>
         </a>
       </li><!-- End Contact Page Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bx bxs-arrow-from-bottom"></i>
-          <span>Send Data</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
+      
       <li class="nav-item">
         <a class="nav-link collapsed" href="downloaddata.html">
           <i class="bx bxs-arrow-to-bottom"></i>
@@ -328,7 +313,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Kontak Informasi Layanan Pengaduan, Aspirasi, dan Survey Masyarakat Diskominfotik Sumbar</h1>
+      <h1><b>Kontak</b></h1>
     </div><!-- End Page Title -->
 
     
@@ -379,12 +364,14 @@
                 <div class="row gy-4">
           
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    <input type="text" name="name" class="form-control" placeholder="Instansi Name" required>
                   </div>
           
                   <div class="col-md-6">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    <input type="email" class="form-control" name="email" placeholder="Instansi Email" required>
                   </div>
+                  
+                  
           
                   <div class="col-md-12">
                     <input type="text" class="form-control" name="subject" placeholder="Subject" required>
@@ -400,12 +387,22 @@
                     </div>
                   </div>
           
-                  <div class="col-md-12 text-center">
+                  <div class="col-md-6 text-center">
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
           
                     <button type="submit">Send Message</button>
+                  </div>
+
+                  <div class="col-md-6 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+          
+                    <button type="view">
+                      <a href="inbox3.html">View All Messages</a>
+                  </button>
                   </div>
           
                 </div>
@@ -420,6 +417,12 @@
     </section>
 
   </main><!-- End #main -->
+  <div id="sentMessageModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <p>Your message has been sent to Dinas Kominfotik Sumbar</p>
+    </div>
+  </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -451,5 +454,31 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+<script>
+  document.getElementById("sendMessageButton").addEventListener("click", function(event){
+    event.preventDefault(); // Mencegah pengiriman formulir default
+    document.getElementById("sentMessageModal").style.display = "block"; // Tampilkan modal
+  });
 
+  document.querySelector(".close-button").addEventListener("click", function(){
+    document.getElementById("sentMessageModal").style.display = "none"; // Sembunyikan modal
+    resetForm(); // Atur ulang formulir setelah menutup modal
+  });
+
+  window.addEventListener("click", function(event){
+    if(event.target == document.getElementById("sentMessageModal")) {
+      document.getElementById("sentMessageModal").style.display = "none"; // Sembunyikan modal jika diklik di luar
+      resetForm(); // Atur ulang formulir setelah menutup modal
+    }
+  });
+
+  function resetForm() {
+    // Atur ulang nilai-nilai input formulir ke nilai awal
+    document.querySelector('input[name="name"]').value = '';
+    document.querySelector('input[name="email"]').value = '';
+    document.querySelector('input[name="subject"]').value = '';
+    document.querySelector('textarea[name="message"]').value = '';
+    document.querySelector('input[type="file"]').value = '';
+  }
+</script>
 </html>
